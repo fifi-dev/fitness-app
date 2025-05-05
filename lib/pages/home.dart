@@ -15,6 +15,7 @@ class HomePage extends StatelessWidget {
           _searchField(),
           SizedBox(height: 40,),//to add distance/space between search bar & category block
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 20),
@@ -27,6 +28,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(height: 15,),
               Container(
                 height: 150,
                 color: Colors.green,
