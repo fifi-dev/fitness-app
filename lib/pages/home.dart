@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
         //elevation: 0.0, //enlever le shadow sur android
         centerTitle: true,
         leading: Container(
-          margin: EdgeInsets.all(10),
+          margin: EdgeInsets.all(10), //height & width will not work so margin of 10 all around
           decoration: BoxDecoration(
             color: Colors.black,
             borderRadius: BorderRadius.circular(10)
