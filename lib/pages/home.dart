@@ -20,7 +20,12 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         leading: Container(
           margin: EdgeInsets.all(10), //height & width will not work so margin of 10 all around
-          child: SvgPicture.asset('assets/icons/Arrow - Left 2.svg'),
+          alignment: Alignment.center, //fixes icon sizing
+          child: SvgPicture.asset(
+            'assets/icons/Arrow - Left 2.svg',
+            height: 20,
+            width: 20,
+          ),
           decoration: BoxDecoration(
             color: Color(0xffF7F9F8),
             borderRadius: BorderRadius.circular(10)
