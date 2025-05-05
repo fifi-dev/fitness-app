@@ -26,25 +26,33 @@ class HomePage extends StatelessWidget {
                 filled: true,
                 fillColor: Colors.white,
                 contentPadding:  EdgeInsets.all(15), //reduce height of the input field
+                hintText: 'Search Pancake',
+                hintStyle: TextStyle(
+                  color: Color(0xffDDDADA),
+                  fontSize: 14
+                ),
                 prefixIcon: Padding(
                   padding: const EdgeInsets.all(12),
                   child: SvgPicture.asset('assets/icons/Search.svg'),
                 ),
-                suffixIcon: IntrinsicHeight(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end, //keep/display icon on the right side
-                    children: [
-                      VerticalDivider(
-                        color: Colors.black,
-                        indent: 10, //create space from the top
-                        endIndent: 10, //create space from the bottom
-                        thickness: 0.1,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: SvgPicture.asset('assets/icons/Filter.svg'),
-                      ),
-                    ],
+                suffixIcon: Container(
+                  width: 100,
+                  child: IntrinsicHeight(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end, //keep/display icon on the right side
+                      children: [
+                        VerticalDivider(
+                          color: Colors.black,
+                          indent: 10, //create space from the top
+                          endIndent: 10, //create space from the bottom
+                          thickness: 0.1,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: SvgPicture.asset('assets/icons/Filter.svg'),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 border: OutlineInputBorder(
