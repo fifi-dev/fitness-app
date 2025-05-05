@@ -6,7 +6,18 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(
+          'Breakfast',
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold
+          ),
+        ),
+        //backgroundColor: Colors.white, //:seulement sur android
+        //elevation: 0.0, //enlever le shadow sur android
+        centerTitle: true,
+      ),
     );
   }
 }
