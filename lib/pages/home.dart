@@ -17,6 +17,13 @@ class HomePage extends StatelessWidget {
         //backgroundColor: Colors.white, //:seulement sur android
         //elevation: 0.0, //enlever le shadow sur android
         centerTitle: true,
+        leading: Container(
+          margin: EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            color: Colors.black,
+            borderRadius: BorderRadius.circular(10)
+          ),
+        ),
       ),
     );
   }
