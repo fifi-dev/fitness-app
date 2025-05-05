@@ -26,6 +26,10 @@ class HomePage extends StatelessWidget {
                 filled: true,
                 fillColor: Colors.white,
                 contentPadding:  EdgeInsets.all(15), //reduce height of the input field
+                prefixIcon: Padding(
+                  padding: const EdgeInsets.all(12),
+                  child: SvgPicture.asset('assets/icons/Search.svg'),
+                ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
                   borderSide: BorderSide.none //remove borders
