@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -19,8 +20,9 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         leading: Container(
           margin: EdgeInsets.all(10), //height & width will not work so margin of 10 all around
+          child: SvgPicture.asset('assets/icons/Arrow - Left 2.svg'),
           decoration: BoxDecoration(
-            color: Colors.black,
+            color: Color(0xffF7F9F8),
             borderRadius: BorderRadius.circular(10)
           ),
         ),
