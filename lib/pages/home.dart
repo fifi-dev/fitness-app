@@ -8,63 +8,89 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar(),
+      backgroundColor: Colors.white,
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start, //align start vertically
         children: [
-          Container(
-            margin: EdgeInsets.only(top: 40, left: 20, right: 20),
-            decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: Color(0xffff1D1617).withOpacity(0.11),
-                  blurRadius: 40,
-                  spreadRadius: 0.0
-                )
-              ]
-            ),
-            child: TextField( 
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.white,
-                contentPadding:  EdgeInsets.all(15), //reduce height of the input field
-                hintText: 'Search Pancake',
-                hintStyle: TextStyle(
-                  color: Color(0xffDDDADA),
-                  fontSize: 14
-                ),
-                prefixIcon: Padding(
-                  padding: const EdgeInsets.all(12),
-                  child: SvgPicture.asset('assets/icons/Search.svg'),
-                ),
-                suffixIcon: Container(
-                  width: 100,
-                  child: IntrinsicHeight(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end, //keep/display icon on the right side
-                      children: [
-                        VerticalDivider(
-                          color: Colors.black,
-                          indent: 10, //create space from the top
-                          endIndent: 10, //create space from the bottom
-                          thickness: 0.1,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: SvgPicture.asset('assets/icons/Filter.svg'),
-                        ),
-                      ],
-                    ),
+          _searchField(),
+          SizedBox(height: 40,),//to add distance/space between search bar & category block
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Text(
+                  'Category',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600
                   ),
                 ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
-                  borderSide: BorderSide.none //remove borders
-                )
               ),
-            ),
+              Container(
+                height: 150,
+                color: Colors.green,
+              )
+            ],
           )
         ],
       ),
     );
+  }
+
+  Container _searchField() {
+    return Container(
+          margin: EdgeInsets.only(top: 40, left: 20, right: 20),
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Color(0xffff1D1617).withOpacity(0.11),
+                blurRadius: 40,
+                spreadRadius: 0.0
+              )
+            ]
+          ),
+          child: TextField( 
+            decoration: InputDecoration(
+              filled: true,
+              fillColor: Colors.white,
+              contentPadding:  EdgeInsets.all(15), //reduce height of the input field
+              hintText: 'Search Pancake',
+              hintStyle: TextStyle(
+                color: Color(0xffDDDADA),
+                fontSize: 14
+              ),
+              prefixIcon: Padding(
+                padding: const EdgeInsets.all(12),
+                child: SvgPicture.asset('assets/icons/Search.svg'),
+              ),
+              suffixIcon: Container(
+                width: 100,
+                child: IntrinsicHeight(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end, //keep/display icon on the right side
+                    children: [
+                      VerticalDivider(
+                        color: Colors.black,
+                        indent: 10, //create space from the top
+                        endIndent: 10, //create space from the bottom
+                        thickness: 0.1,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SvgPicture.asset('assets/icons/Filter.svg'),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(15),
+                borderSide: BorderSide.none //remove borders
+              )
+            ),
+          ),
+        );
   }
 
   AppBar appBar() {
