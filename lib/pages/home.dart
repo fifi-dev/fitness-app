@@ -30,9 +30,22 @@ class HomePage extends StatelessWidget {
                   padding: const EdgeInsets.all(12),
                   child: SvgPicture.asset('assets/icons/Search.svg'),
                 ),
-                suffixIcon: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SvgPicture.asset('assets/icons/Filter.svg'),
+                suffixIcon: IntrinsicHeight(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end, //keep/display icon on the right side
+                    children: [
+                      VerticalDivider(
+                        color: Colors.black,
+                        indent: 10, //create space from the top
+                        endIndent: 10, //create space from the bottom
+                        thickness: 0.1,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SvgPicture.asset('assets/icons/Filter.svg'),
+                      ),
+                    ],
+                  ),
                 ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
